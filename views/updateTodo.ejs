@@ -5,15 +5,16 @@
         <div>
             <a href="/" class="btn">Back</a>
 
-            <form action="" method="">
+            <form action="/update-todo/<%= todo._id %>" method="post">
                 <div class="update-todo">
                     <div class="form-group">
                         <label for="title" class="text-light">Title</label>
                         <input 
                         type="text" 
                         name="title" 
-                        value="" 
+                        value="<%= todo.title %>" 
                         placeholder="type todo here"
+                        required
                         />
                     </div>
 
@@ -22,7 +23,7 @@
                         <input 
                         type="text" 
                         name="desc" 
-                        value="" 
+                        value="<%= todo.desc %>" 
                         placeholder="type description here"
                         />
                     </div>
@@ -34,4 +35,4 @@
             </form>
         </div>
     </div>
-<%- include(`partials/footer`) %>
+    <%- include(`partials/footer`) %>
